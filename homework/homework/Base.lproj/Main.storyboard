@@ -18,18 +18,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qn-rs-yQy">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="タップ"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOm-PI-foD">
+                                <rect key="frame" x="149" y="318" width="77" height="30"/>
+                                <state key="normal" title="進むボタン"/>
                                 <connections>
-                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YgB-lU-0TJ"/>
+                                    <segue destination="gqN-bL-SNP" kind="presentation" id="iKS-nl-PbV"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZn-NY-wwG">
+                                <rect key="frame" x="152" y="501" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oOm-PI-foD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N3i-FK-dto"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nZn-NY-wwG" secondAttribute="bottom" constant="130" id="SSD-tr-RKq"/>
+                            <constraint firstItem="nZn-NY-wwG" firstAttribute="centerX" secondItem="oOm-PI-foD" secondAttribute="centerX" id="VcG-ku-BaI"/>
+                            <constraint firstItem="oOm-PI-foD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wN4-am-zWT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="nZn-NY-wwG" id="L0J-je-6b4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,7 +56,22 @@
                     <view key="view" contentMode="scaleToFill" id="ide-U5-bcv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BM7-jb-kf6">
+                                <rect key="frame" x="149" y="318" width="77" height="30"/>
+                                <state key="normal" title="戻るボタン">
+                                    <color key="titleColor" red="1" green="0.57855135202407837" blue="0.012521214783191681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="ryV-Id-6cl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BM7-jb-kf6" firstAttribute="centerX" secondItem="ide-U5-bcv" secondAttribute="centerX" id="JGF-Rs-dks"/>
+                            <constraint firstItem="BM7-jb-kf6" firstAttribute="centerY" secondItem="ide-U5-bcv" secondAttribute="centerY" id="cEk-0z-SR7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="qH9-Eh-vQ3"/>
                     </view>
                 </viewController>

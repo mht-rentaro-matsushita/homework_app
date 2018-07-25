@@ -10,33 +10,44 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBAction func tapButton(_ sender: Any) {
-    }
+    
+    @IBOutlet weak var displayLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        displayLog()
+//        displayLog()
+        print("viewDidLoadメソッド")
+        displayLabel.text = "viewDidLoadメソッド"
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        displayLog()
+//        displayLog()
+        print("viewWillAppearメソッド")
+        displayLabel.text = "viewWillappearメソッド"
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        displayLog()
+//        displayLog()
+        print("viewDidAppearメソッド")
+        displayLabel.text = "viewDidAppearメソッド"
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        displayLog()
+//        displayLog()
+        print("viewWillDisappearメソッド")
+        displayLabel.text = "viewWillDisappearメソッド"
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        displayLog()
+//        displayLog()
+        print("viewDidDisappearメソッド")
+        displayLabel.text = "viewDidDisappearメソッド"
     }
     
     override func didReceiveMemoryWarning() {
